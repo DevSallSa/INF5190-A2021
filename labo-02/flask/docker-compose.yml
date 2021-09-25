@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+    flask:
+        build:
+            dockerfile: ./docker/Dockerfile
+            context: ./
+        container_name: inf5190-labo2.flask
+        volumes:
+            - ./:/app
+        ports:
+          - 5000:5000
+        environment:
+          - FLASK_ENV=development
