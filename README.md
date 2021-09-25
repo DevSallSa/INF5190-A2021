@@ -31,3 +31,8 @@ Pour débuter rapidement une application Flask.
     Vous devriez voir le chemin dans votre terminal jusqu'à votre environnement virtuelle
 
     ![Which Pip](assets/whichpip_labo2.png)
+
+
+### POST REDIRECT GET
+
+![Exemple de POST REDIRECT GET](assets/POST_REDIRECT_GET.png)
