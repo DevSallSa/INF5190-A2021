@@ -1,0 +1,3 @@
+text : test de text
+radio : True
+select : choix2
