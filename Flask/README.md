@@ -1,6 +1,6 @@
 # Remarques et informations utiles
 
-L'enoncé du laboratoire est disponible [ici](./enonce.md)
+L'enoncé du laboratoire est disponible [ici](./enonce.md).
 
 ## Création d'un environnement virtuel :
 
@@ -49,6 +49,27 @@ $ sudo update-alternatives --config python
 
 $ sudo update-alternatives  --set python /usr/bin/python3.9.7
 ````
+
+## Lancer l'application
+Pour cet exercice il est nécessaire d'intaller `flask` (vu durant la séance) :
+````
+$ pip install flask
+````
+
+**Remarque** : Etant surs de la version python utilisée (3.9.7 dans notre cas), il n'est pas nécessaire de préciser la version de `pip`.
+
+Pour créer le fichier `requirements.txt`:
+
+````
+$ pip freeze > requirements.txt
+````
+
+Pour lancer directement le corrigé disponible sur le depot :
+````
+$ pip install -r requirements.txt
+$ make
+````
+
 
 ## Remarques importantes :
 
