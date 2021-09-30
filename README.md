@@ -32,7 +32,14 @@ Pour débuter rapidement une application Flask.
 
     ![Which Pip](assets/whichpip_labo2.png)
 
-
 ### POST REDIRECT GET
 
 ![Exemple de POST REDIRECT GET](assets/POST_REDIRECT_GET.png)
+
+## Labo 03
+
+-   Atelier : Base de données SQLite
+-   Installation vagrant
+-   Injection SQL
+-   Manipuler des données avec Python et SQLite 3
+-   Peut-être, intégration avec Flask
