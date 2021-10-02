@@ -22,6 +22,7 @@ $ sqlite3 musique.db
 - On peut en suite lancer le script python :
 
 `````
+$ cd ..
 $ python main.py
 `````
 
