@@ -7,7 +7,7 @@ class Database:
 
     def get_connection(self):
         if self.connection is None:
-            self.connection =sqlite3.connect('db/musique.db')
+            self.connection =sqlite3.connect('db/articles.db')
         return self.connection
 
     def disconnet(self):

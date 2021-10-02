@@ -1,5 +1,5 @@
 from database import Database
-from flask import Flask, g
+from flask import Flask, g, render_template
 
 app = Flask(__name__)
 
@@ -14,6 +14,11 @@ def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.disconnect()
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("404.html"), 404
+
 
 # TODO
 #@app.route('/')
