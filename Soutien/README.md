@@ -20,7 +20,7 @@ Quelques des organisations qui utilisent SQLAlchemy :
 - The OpenStack Project
 - Survey Monkey
 
-Documentations :
+Documentation :
 - https://www.sqlalchemy.org/
 - https://flask-sqlalchemy.palletsprojects.com/en/2.x/
 
