@@ -41,4 +41,6 @@ def formulaire():
             # Si valides, on écrit les informations récupérées dans le fichier log.txt
             log = open("log.txt", "w")
             log.write("text : %s"%text + "\nradio : %s"%radio + "\nselect : %s"%select)
+            # Par mesure de sécurité toujours fermer le fichier après traitement
+            log.close()
             return redirect("/confirmation")
