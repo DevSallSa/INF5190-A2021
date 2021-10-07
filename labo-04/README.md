@@ -32,7 +32,7 @@ cd /vagrant
 
 ```bash
 # Installer les dépendances python
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 
 # Configurer votre fichier d'environnement
 cp  /vagrant/app/.env.example /vagrant/app/.env
