@@ -17,10 +17,14 @@ class Database:
         return [dict(dict_name) for dict_name in cursor.fetchall()]
 
     # TODO: Connect to the database
+    def get_connection(self):
 
     # TODO: Disconnect from the database
+    def disconnect(self):
 
     # TODO: Get all (order by lastname)
+    def get_individual_by_lastname(self):
 
     # TODO: Insert person
+    def insert_individual(self, individual):
 
