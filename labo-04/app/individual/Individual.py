@@ -1,5 +1,5 @@
 class Individual:
-    def __init__(self, id, firstname, lastname, age):
+    def __init__(self,firstname, lastname, age, id=None):
         self.id = id
         self.firstname = firstname
         self.lastname = lastname
@@ -9,4 +9,9 @@ class Individual:
         """
         Helper method to map everything as a dictionnary
         """
-        # TODO: Complete method
+        return {
+            "id": self.id,
+            "firstname": self.firstname,
+            "lastname": self.lastname,
+            "age": self.age
+        }
