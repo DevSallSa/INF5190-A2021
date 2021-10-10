@@ -14,6 +14,13 @@ class Database:
         if self.connection is not None:
             self.connection.close()
 
-    #TODO : Une methode qui permet de récuperer les personnes dans la base de données - les personnes sont triés par ordre alphabetique de noms de familles
+    def get_all_persons(self):
+        cursor = self.get_connection().cursor()
+        cursor.execute("SELECT lastname, firstname, age FROM person ORDER BY lastname")
+        persons = cursor.fetchall()
+        return persons
 
-    #TODO : Une methode qui permet d'ajouter une personne à la base de données
+    def add_person(self, nom, prenom, age):
+        connection = self.get_connection()
+        connection.execute("INSERT INTO person(lastname, firstname, age) " "VALUES(?, ?, ?)", (nom, prenom, age))
+        connection.commit()

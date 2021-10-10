@@ -2,8 +2,20 @@
 {% block content %}
 
 <h2>Gestion de personnes</h2>
-<!-- TO DO -->
-<!-- Ajouter un formulaire pour permettre l'ajout de personnes dans la base de données -->
-<!-- Gestion d'erreur : Tous les champs sont obligatoires -->
-<!-- Garder toutes les valeurs dans les champs en cas d'erreur -->
+{% if error %}
+<p style="color:#F00">{{error}}</p>
+{% endif %}
+
+<form method="POST" action="/">
+    <label for="champ-nom">Nom</label>
+    <input type="text" name="champ-nom" value={{request.form["champ-nom"]}}>
+    <br>
+    <label for="champ-prenom">Prénom</label>
+    <input type="text" name="champ-prenom" value={{request.form["champ-prenom"]}}>
+    <br>
+    <label for="champ-age">Age</label>
+    <input type="number" name="champ-age" id="age" value={{request.form["champ-age"]}}>
+    <br>
+    <button type="submit">Ajouter</button>
+</form>
 {% endblock content %}
