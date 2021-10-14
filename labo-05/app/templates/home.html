@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block content %}
+
+<button class="super-bouton"></button>
+<div class="container">
+    <form class="mt-4 mb-4" action="/personne" method="POST">
+        <div class="mb-3">
+            <div class="mb-3">
+                <label for="firstname">Firstname</label>
+                <input type="text" id="firstname" name="firstname" class="form-control" maxlength="50" value="{{firstname}}" />
+                <div class="valid-feedback">Valide.</div>
+                {% if errors %}
+                <div class="alert alert-danger">{{ errors['firstname'] }}</div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="lastname" aria-describedby="lastname" name="lastname" value="{{lastname}}" />
+            <div id="lastname-error" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" aria-describedby="age" name="age" value="{{age}}" />
+            <div id="age-error" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for individual in individuals %}
+
+            <tr>
+                <th scope="row">{{individual.id}}</th>
+                <td>{{individual.firstname}}</td>
+                <td>{{individual.lastname}}</td>
+                <td>{{individual.age}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
