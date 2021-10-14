@@ -49,3 +49,38 @@ cd /vagrant/app
 ```bash
 flask run
 ```
+
+# Tailwind CSS configuration.
+
+Reference: https://tailwindcss.com/docs/installation
+
+1. Initialiser votre fichier de configuration.
+
+```bash
+npx tailwindcss init
+```
+
+1. Adapter votre fichier de configuration pour purger les fichiers HTML.
+
+```bash
+# tailwind.config.js
+module.exports = {
+    mode: 'jit',
+    purge: ["./app/templates/*.html"],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+        extend: {},
+    },
+    variants: {},
+    plugins: [],
+};
+```
+
+3.  Lancer le compileur de tailwind en ligne de commande pour l'intégrer à votre projet.
+
+L'option `--watch` permettera de détecter les changements et recompiler.
+
+```bash
+# From the root
+npx tailwindcss -o app/static/styles/tailwind.css --watch
+```
