@@ -22,3 +22,11 @@ pip install -r requirements.txt
 ```bash
 make
 ```
+
+# Labo 05 -- TODO
+
+-   [ ] Compléter fonction AJAX (get book by id)
+-   [ ] Compléter le look and feel
+-   [ ] Afficher une liste des livres sur la page d'accueil
+-   [ ] Intégrer la fonction `getBookById` lors d'un événement click sur le lien d'un livre.
+-   [ ] Afficher un état de progression lors d'un click sur le lien
