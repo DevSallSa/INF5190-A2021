@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 # Initialise l'application Flask
-app = Flask(__name__, static_folder="static")
+app = Flask(__name__, static_folder="static", static_url_path="/")
 app.secret_key = "toto"
 app.register_blueprint(api_v1)
 
@@ -28,8 +28,8 @@ def _handle_api_error(error):
 
 @app.route("/", methods=["GET"])
 def home():
-    individuals = get_db().get_individual_by_lastname()
-    return render_template("home.html", individuals=individuals)
+    # individuals = get_db().get_books()
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
