@@ -21,17 +21,16 @@ class Database:
             self.connection.close()
             self.connection = None
 
-    def get_individual_by_lastname(self):
+    def get_books(self):
         connection = self.get_connection()
         cursor = connection.cursor()
 
-        cursor.execute("SELECT * FROM individual ORDER BY lastname ASC")
-        return self.to_dict("individual", cursor)
+        cursor.execute("SELECT * FROM books ORDER BY title ASC")
+        return self.to_dict("books", cursor)
 
-    def insert_individual(self, individual):
+    def get_book_by_id(self, id):
         connection = self.get_connection()
         cursor = connection.cursor()
 
-        cursor.execute("INSERT INTO individual(lastname, firstname, age) values (?, ?, ?)", [individual['lastname'], individual['firstname'], individual['age']])
-        connection.commit()
-        return 1
+        cursor.execute("SELECT * FROM books WHERE id = ?", [id])
+        return self.to_dict("book", cursor)
