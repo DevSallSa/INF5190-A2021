@@ -8,5 +8,5 @@ export FLASK_ENV=development
 all: flask
 
 flask:
-	flask run
+	npx tailwindcss -i app/styles/tailwind.css -o app/static/styles/styles.css && flask run
 
