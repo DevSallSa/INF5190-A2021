@@ -11,7 +11,7 @@ class Database:
     def get_connection(self):
         """Open database connection. Should be closed after use"""
         if self.connection is None:
-            self.connection = sqlite3.connect('database/database.db')
+            self.connection = sqlite3.connect('app/database/database.db')
             self.connection.row_factory = sqlite3.Row
         return self.connection
 
@@ -25,7 +25,7 @@ class Database:
         connection = self.get_connection()
         cursor = connection.cursor()
 
-        cursor.execute("SELECT * FROM books ORDER BY title ASC")
+        cursor.execute("SELECT id, title, created_at FROM books ORDER BY title ASC")
         return self.to_dict("books", cursor)
 
     def get_book_by_id(self, id):

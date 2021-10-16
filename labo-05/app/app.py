@@ -28,8 +28,9 @@ def _handle_api_error(error):
 
 @app.route("/", methods=["GET"])
 def home():
-    # individuals = get_db().get_books()
-    return render_template("home.html")
+    books = get_db().get_books()
+
+    return render_template("home.html", books=books)
 
 
 if __name__ == "__main__":

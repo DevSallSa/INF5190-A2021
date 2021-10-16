@@ -1,5 +1,17 @@
-{% extends "layout.html" %} {% block content %}
-
-<h1>Hello world</h1>
-
-{% endblock %}
+{% extends "layout.html" %} {% block content %} {% for book in books %}
+<div class="flex flex-col px-6 py-8 rounded-lg shadow-lg transform transition-all duration-200 ease-out">
+    <h1 class="text-2xl text-gray-900 mb-2">{{book.title}}</h1>
+    <p class="text-sm text-gray-400 mb-4">{{book.created_at}}</p>
+    <button
+        type="button"
+        onclick="getBookById({{ book.id }});"
+        id="button-{{book.id}}"
+        class="flex text-blue-400 transition duration-150 transform hover:underline hover:text-blue-600"
+    >
+        See more
+    </button>
+    <div id="container-{{book.id}}" class="hidden py-2">
+        <p id="content-{{book.id}}"></p>
+    </div>
+</div>
+{% endfor %} {% endblock %}
