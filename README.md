@@ -6,6 +6,7 @@ Contenu du dépot :
 - Labo 2 : [Flask](./Flask)
 - Labo 3 : [SQlite](./SQlite)
 - Labo 4 : [Flask & SQlite](./Flask2)
+- Labo 5 : [Ajax](./Ajax)
 - [Soutien](./Soutien) pour les travaux
 
 
