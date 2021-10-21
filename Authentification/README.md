@@ -32,6 +32,6 @@ Il est conçus pour un accès efficace et performant aux bases de données, adap
 - `wtforms` : WTForms est une bibliothèque flexible de validation et de rendu de formulaires pour le développement web en Python.
 
 
-Des documentations utiles ont été ajoutées (ici)[./https://github.com/elaelheni/INF5190-A2021/blob/Corrections-Ela/README.md]
+Des documentations utiles ont été ajoutées [ici](https://github.com/elaelheni/INF5190-A2021/blob/Corrections-Ela/README.md)
 
 
