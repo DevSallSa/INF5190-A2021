@@ -7,7 +7,7 @@ La version 1 du solutionnaire de l'exercice est disponible [ici](./Version1).
 
 Pour réaliser l'exercice la méthode habituelle a été utilisée; utilisation de simples requetes SQL en créant une connexion manuelle avec la base de données.
 
-Deux nouvelles librairies sont utilisées : `flask_bcrypt` er `secret`.
+Deux nouvelles librairies sont utilisées : `flask_bcrypt` et `secret`.
 
 `Bcrypt` est une extension qui fournit des utilitaires de hachage pour l'application.
 
