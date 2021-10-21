@@ -15,3 +15,7 @@ Autres informations utiles :
 - https://www.python.org/doc/
 - https://flask.palletsprojects.com/en/2.0.x/
 - https://sqlite.org/docs.html
+- https://flask-bcrypt.readthedocs.io/en/latest/
+- https://wtforms.readthedocs.io/en/2.3.x/
+- https://www.sqlalchemy.org
+- https://flask-sqlalchemy.palletsprojects.com/en/2.x/
