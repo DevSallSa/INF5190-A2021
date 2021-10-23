@@ -24,16 +24,6 @@ def close_connection(exception):
     if db is not None:
         db.disconnect()
 
-"""
-TODO - Ajout des méthodes de validations :
-1. Vérifier si le courriel entré existe déjà dans la base de données.
-2. Valider que les champs 'courriel' et 'validation courriel' sont identiques
-3. Valider que le mot de passe a le bon format :
-    - minimum de 8 caractères;
-    - au moins une lettre majuscule et une lettre minuscule;
-    - au moins un chiffre;
-    - au moins un caractère de ponctuation.
-"""
 def validate_courriel(courriel, validation_courriel):
     return courriel == validation_courriel
 
@@ -62,7 +52,7 @@ def home():
         mdp = request.form["mdp"]
 
         if nom == "" or courriel == "" or validation_courriel == "" or mdp == "":
-            flash("ERREUR! Tous les champs sont obligatoires.", "error")
+            flash("ERREUR! Tous les champs sont obligatoires.", category='error')
             return render_template('home.html')
         if validate_courriel(courriel, validation_courriel) is False:
             return render_template('home.html', mail_error="Attention les deux adresses courriel sont différentes!")
