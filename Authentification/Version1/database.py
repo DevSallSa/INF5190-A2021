@@ -14,14 +14,19 @@ class Database:
         if self.connection is not None:
             self.connection.close()
 
-    """
-    TODO - Insertion d'un utilisateur dans la base de données
-    """
+    def insert_user(self, nom, courriel, date_inscription, mdp):
+        connection = self.get_connection()
+        connection.execute("INSERT INTO compte (nom, courriel, date_inscription, mdp)" "VALUES(?, ?, ?, ?)", (nom, courriel, date_inscription, mdp))
+        connection.commit()
 
-
-    """
-    TODO - Verifier si un utilisateur existe dans la bd à partir de son courriel
-    """
+    def mail_exists(self, courriel):
+        cursor = self.get_connection().cursor()
+        cursor.execute("SELECT * FROM compte WHERE courriel LIKE ?", ('%'+courriel+'%',))
+        exist = cursor.fetchall()
+        if len(exist) == 0:
+            return False
+        else:
+            return True
 
     
     

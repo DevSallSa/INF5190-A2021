@@ -1,0 +1,31 @@
+{% extends 'default.html' %}
+{% block content %}
+
+<h5>Formulaire d'inscription </h5>
+<form action='/' method='POST'>
+    <label for="champ-nom">Nom</label>
+    <input type="text" id="champ-nom" name="nom">
+    <br>
+    <br>
+    <label for="champ-courriel">Courriel</label>
+    <input type="text" id="champ-courriel" name="courriel">
+    <br>
+    <br>
+    <label for="champ-validation-courriel">Validation courriel</label>
+    <input type="text" id="champ-validation-courriel" name="validation-courriel">
+    <br>
+    {% if mail_error %}
+    <span style="color:red">{{mail_error}}</span>
+    {% endif %}
+    <br>
+    <label for="champ-mdp">Mot de passe</label>
+    <input type="password" id="champ-mdp" name="mdp">
+    <br>
+    {% if mdp_error %}
+    <span style="color:red">{{mdp_error}}</span>
+    {% endif %}
+    <br>
+    <input type="submit" value="S'inscrire">
+</form>
+
+{% endblock %}
