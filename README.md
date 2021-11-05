@@ -7,7 +7,8 @@ Contenu du dépot :
 - Labo 3 : [SQlite](./SQlite)
 - Labo 4 : [Flask & SQlite](./Flask2)
 - Labo 5 : [Ajax](./Ajax)
-- Labo6 : [Authentification](./Authentification)
+- Labo 6 : [Authentification](./Authentification)
+- Labo 7 : [JSON](./JSON) & [XML](./XML)
 - [Soutien](./Soutien) pour les travaux
 
 
