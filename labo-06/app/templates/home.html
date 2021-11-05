@@ -13,8 +13,20 @@
 <h1>Users</h1>
 <ul>
     {% for user in users %}
-    <li>{{user.username}}</li>
+        <li>{{user.username}}</li>
     {% endfor %}
+
+    <div>
+
+    </div>
 </ul>
+
+<button onclick="getBooksAsyncAwait()">
+    Click me
+</button>
+
+<div id="users-list">
+
+</div>
 
 {% endblock %}

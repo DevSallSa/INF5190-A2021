@@ -1,7 +1,8 @@
 
-from flask import Blueprint, jsonify, request, flash, redirect, url_for
+from flask import Blueprint, jsonify, request, flash, redirect, url_for, Response
 from schemas.shared import db
 from schemas.User.UserModel import User
+from dicttoxml import dicttoxml
 import uuid
 import hashlib
 users_api = Blueprint("users_api", __name__)
@@ -9,6 +10,9 @@ users_api = Blueprint("users_api", __name__)
 @users_api.get('/api/users')
 def get_all_users():
     users = User.query.all()
+    users2 = dict()
+    users2['key1'] = "value1"
+    # return Response(dicttoxml(users2, custom_root="users"), mimetype="application/xml")
     return jsonify(users)
 
 @users_api.route('/api/users/create', methods=["POST"])

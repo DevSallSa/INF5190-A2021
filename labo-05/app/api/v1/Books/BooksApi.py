@@ -11,7 +11,8 @@ def get_db():
 
 @books_api.route("/books")
 def get_all_books():
-    return { "message": "List of books as JSON"}, 200
+    books = get_db().get_books()
+    return jsonify(books), 200
 
 @books_api.route("/book/<int:id>")
 def get_book_by_id(id):

@@ -7,7 +7,7 @@ import hashlib
 import uuid
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", static_url_path="/")
 app.secret_key = 'secret'
 
 # Configure SQLITE connection
