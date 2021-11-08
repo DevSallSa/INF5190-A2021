@@ -5,9 +5,9 @@
     <document type="book">
       <title>Théorie de la musique</title>
       <author>A. Danhauser</author>
-      <year><1996</year>
+      <year>1996</year>
     </document>
-    <document type=book>
+    <document type="book">
       <title>Test-Driven Development by Example</title>
       <author>Kent Beck</author>
       <year>2003</year>
@@ -20,9 +20,10 @@
       <author>John Vlissides</author>
       <year>1995</year>
     </document>
-    <document type="article'>
+    <document type="article">
       <title>XML Schema</title>
       <author>Eric van der Vlist</author>
       <year>2001</year>
   </document>
+  </documents>
 </library>

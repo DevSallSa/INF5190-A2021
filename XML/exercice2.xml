@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<dossiers>
+
+  <dossier>
+    <nom>Steeve</nom>
+    <prenom>Steeve</prenom>
+    <nam>STEE987938753</nam>
+    <date_naissance>1998-02-12</date_naissance>
+    <medecin>
+        <nom>Pas Steeve</nom>
+        <prenom>Docteur</prenom>
+        <identifiant>JHFJF7676475</identifiant>
+        <ville>Paris</ville>
+    </medecin>
+    <visites>
+        <visite>
+            <date>2021-05-11</date>
+            <sujet>Grippe</sujet>
+            <description>Maux de tete, mais pas mort</description>
+        </visite>
+        <visite>
+            <date>2020-05-11</date>
+            <sujet>Grippe</sujet>
+            <description>Maux de tete, mais pas mort</description>
+        </visite>
+    </visites>
+  </dossier>
+
+  <dossier>
+    <nom></nom>
+    <prenom></prenom>
+    <nam></nam>
+    <date_naissance></date_naissance>
+    <medecin>
+        <nom></nom>
+        <prenom></prenom>
+        <identifiant></identifiant>
+        <ville></ville>
+    </medecin>
+    <visites>
+        <date></date>
+        <sujet></sujet>
+        <description></description>
+    </visites>
+  </dossier>
+
+</dossiers>
