@@ -12,7 +12,6 @@ class ProductionConfig(Config):
     pass
 
 class DevelopmentConfig(Config):
-    FLASK_ENV = "development"
     SESSION_COOKIE_SECURE = False
     SESSION_COOKIE_NAME = "google-login-session"
 
