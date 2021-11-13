@@ -11,3 +11,10 @@ https://developers.google.com/identity/sign-in/web/sign-in
 # Enonce
 
 https://github.com/jacquesberger/exemplesINF5190/blob/master/Ateliers/sessions/enonce.md
+
+
+# Authentication
+
+username : toto@gmail.com
+
+password : toto

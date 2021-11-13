@@ -13,7 +13,7 @@ def authentication_required(f):
 
 # Check if the id in in the session flask variable
 def is_authenticated(session):
-    return "id" in session
+    return "profile" in session
 
 # Only this email has rights for D4 task
 def is_admin(email):
